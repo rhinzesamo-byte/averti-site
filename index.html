@@ -8,14 +8,14 @@
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f6f2ec; --surface:#fffdf9; --ink:#141210; --muted:#6c655d; --line:#ddd5ca;
   --inv-bg:#141210; --inv-ink:#f6f2ec; --gold:#a8792a; --gold-soft:#e9d9b8;
   --pink:#ec7f9a; --green:#5e9e7c; --blue:#4f9bd6; --purple:#9b7bd1;
   --logo-filter:none;
-  --serif:"Bodoni Moda",Didot,"Times New Roman",serif; --sans:Inter,system-ui,sans-serif;
+  --serif:Archivo,"Helvetica Neue",Arial,sans-serif; --sans:Inter,system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#12100e; --surface:#1c1916; --ink:#f1ebe2; --muted:#a59c90; --line:#34302a;
@@ -33,7 +33,7 @@ a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
 @media(min-width:720px){.wrap{padding:0 32px}}
 .eyebrow{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.05;letter-spacing:-.025em}
 h2{font-size:clamp(36px,6vw,64px)}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font:600 14px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer;transition:transform .2s,background .2s,color .2s}
 .btn:hover{transform:translateY(-2px)}
@@ -43,7 +43,7 @@ h2{font-size:clamp(36px,6vw,64px)}
 /* nav */
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 20px/1 var(--serif);letter-spacing:.08em}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 20px/1 var(--serif);letter-spacing:.06em}
 .brand img{width:34px;filter:var(--logo-filter)}
 .links{display:none;gap:28px;font-size:14px}
 .links a{text-decoration:none;color:var(--muted)}
@@ -56,8 +56,8 @@ nav .btn{padding:10px 18px;font-size:12px}
 /* hero */
 .hero{display:grid;gap:40px;padding:56px 0 72px;align-items:center}
 @media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr;padding:88px 0 104px}}
-.hero h1{font-size:clamp(52px,10vw,124px);margin:18px 0 22px}
-.hero h1 em{font-style:italic;color:var(--gold)}
+.hero h1{font-size:clamp(46px,8.5vw,104px);margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
 .hero p.lead{font-size:18px;color:var(--muted);max-width:30em;margin-bottom:32px}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero-img{position:relative;justify-self:center;width:min(100%,440px)}
@@ -68,7 +68,7 @@ nav .btn{padding:10px 18px;font-size:12px}
 
 /* marquee */
 .marquee{background:var(--inv-bg);color:var(--inv-ink);overflow:hidden;padding:16px 0;white-space:nowrap}
-.marquee div{display:inline-block;animation:slide 32s linear infinite;font:italic 500 22px/1 var(--serif)}
+.marquee div{display:inline-block;animation:slide 32s linear infinite;font:600 20px/1 var(--serif);letter-spacing:.02em;text-transform:uppercase}
 .marquee span{margin:0 28px}
 .marquee i{font-style:normal;color:var(--gold)}
 @keyframes slide{to{transform:translateX(-50%)}}
@@ -86,7 +86,7 @@ section{padding:88px 0}
 .gallery img{width:100%;object-fit:cover;border-radius:14px;aspect-ratio:3/4}
 @media(min-width:900px){.gallery{position:sticky;top:96px}.gallery img{aspect-ratio:3/5}}
 .price{display:flex;align-items:baseline;gap:14px;margin:18px 0 8px}
-.price b{font:600 56px/1 var(--serif)}
+.price b{font:800 52px/1 var(--serif);letter-spacing:-.03em}
 .price span{color:var(--muted)}
 .promo{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);color:var(--ink);padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px}
 .facts{margin:28px 0;border:2px solid var(--ink);padding:18px 20px;background:var(--surface);font-family:var(--sans)}
@@ -124,24 +124,35 @@ section{padding:88px 0}
 .feat li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
 
 /* scents */
+.lines{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.line{min-width:0;text-align:left;padding:12px;border:2px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);cursor:pointer;font:500 13px/1.3 var(--sans)}
+.line b{display:block;font:800 clamp(14px,3.6vw,28px)/1 var(--serif);letter-spacing:-.03em;margin-bottom:6px;text-transform:uppercase}
+.line span{color:var(--muted)}
+.line[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.line[aria-pressed="true"] span{color:inherit;opacity:.75}
+.search{width:100%;padding:13px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:400 15px var(--sans);margin-bottom:24px}
+.scent .badge{display:none;float:right;font:700 10px/1 var(--sans);letter-spacing:.08em;padding:4px 7px;border-radius:4px;border:1px solid var(--ink)}
+.searching .scent .badge{display:inline-block}
+@media(min-width:720px){.line{padding:16px}}
+.empty{grid-column:1/-1;color:var(--muted);padding:24px 0}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
 .filters button{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 13px var(--sans);cursor:pointer}
 .filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .scents{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,46%),1fr));gap:12px}
 .scent{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
 .scent small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.scent h3{font-size:clamp(19px,2.4vw,24px);margin:6px 0 10px}
+.scent h3{font-size:clamp(17px,2vw,21px);margin:6px 0 10px}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
 .note{margin-top:18px;font-size:13px;color:var(--muted)}
 
 /* society */
 .society{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
-@media(min-width:900px){.society{grid-template-columns:1fr 1fr 1.2fr}}
+@media(min-width:900px){.society{grid-template-columns:1fr 1fr 1fr 1.2fr}}
 .society img{width:100%;height:100%;object-fit:cover;border-radius:14px;aspect-ratio:3/4}
 .quote{grid-column:1/-1;background:var(--inv-bg);color:var(--inv-ink);border-radius:14px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
 @media(min-width:900px){.quote{grid-column:auto}}
-.quote p{font:italic 500 clamp(26px,3vw,38px)/1.15 var(--serif)}
+.quote p{font:600 clamp(22px,2.6vw,32px)/1.25 var(--serif);letter-spacing:-.01em}
 .quote span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
 
 /* order */
@@ -185,7 +196,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       </div>
     </div>
     <div class="hero-img">
-      <img src="img/hero-bottles.webp" alt="Two Averti eau de parfum bottles">
+      <img src="img/hero-labels.webp" alt="Averti Hiscent and Herfume bottles with their scent facts labels">
       <div class="stamp"><span>Buy 3<b>Take 1</b>free</span></div>
     </div>
   </div>
@@ -268,9 +279,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="sec-head">
         <div><span class="eyebrow">The Scent Library</span><h2>Find your signature.</h2></div>
-        <p>Every Averti scent is inspired by a fragrance you already love. Message us with your pick, or ask for one you don't see here.</p>
+        <p>Every Averti scent is inspired by a fragrance you already love. Pick a line, then message us with your choice.</p>
       </div>
-      <div class="filters" id="filters"></div>
+      <div class="lines" id="lines" role="group" aria-label="Choose a line">
+        <button class="line" data-l="her"><b>Herfume</b><span>For her · <i id="n-her"></i> scents</span></button>
+        <button class="line" data-l="his"><b>Hiscent</b><span>For him · <i id="n-his"></i> scents</span></button>
+        <button class="line" data-l="uni"><b>Uniscent</b><span>For everyone · <i id="n-uni"></i> scents</span></button>
+      </div>
+      <input class="search" id="q" type="search" placeholder="Search a scent, brand or note (e.g. vanilla)" aria-label="Search scents">
       <div class="scents" id="list"></div>
       <p class="note">Scents are Averti's own inspired-by interpretations. Averti is not affiliated with the brands named.</p>
     </div>
@@ -284,6 +300,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="society">
         <img src="img/customer-1.webp" alt="Customer holding an Averti twistable perfume">
         <img src="img/customer-2.webp" alt="Customer holding an Averti perfume pouch">
+        <img src="img/hiscent-hand.webp" alt="Holding an Averti Hiscent bottle">
         <div class="quote">
           <p>"Can't stop ordering these scents when everyone keeps asking what perfume I'm wearing."</p>
           <span>— A Signature Scent Society member</span>
@@ -347,50 +364,22 @@ document.querySelectorAll('.sw').forEach(b=>b.onclick=()=>{
   document.getElementById('twbtn').textContent='Order '+c[0].toUpperCase()+c.slice(1)+' Twistable';
 });
 
-// scents
-const S=[
- ['Bath & Body Works','Pink Chiffon','Sweet',['Fruity','Musky','Sweet','Powdery','White Floral']],
- ['Bath & Body Works','Gingham','Floral',['Floral','Citrus','Sweet','Powdery','Violet']],
- ['Bath & Body Works','Cucumber Melon','Fresh',['Ozonic','Aquatic','Fresh','Fruity','Green']],
- ['Bath & Body Works','Mediterranean Mirage','Warm',['Amber','Musky','Citrus','Powdery','Fresh Spicy']],
- ['Bath & Body Works','Warm Vanilla','Sweet',[]],
- ['Le Labo','Santal 33','Warm',['Woody','Powdery','Leather','Warm Spicy','Violet']],
- ['YSL','Black Opium','Warm',[]],
- ['Prada','Paradoxe','Floral',['Floral','Citrus','White Floral','Powdery','Amber']],
- ['Estée Lauder','Pleasures','Fresh',['Floral','Fresh','Green','Rose','Soft Spicy']],
- ['Lacoste','Love of Pink','Fresh',['Fruity','Citrus','Sweet','Fresh','Floral']],
- ['Lacoste','Joy of Pink','Fresh',[]],
- ['Nina Ricci','Nina','Sweet',['Fruity','Citrus','Sweet','Fresh','Woody']],
- ['Nina Ricci','Ricci Ricci','Sweet',['Fruity','Citrus','Sweet','Fresh','Woody']],
- ['Ariana Grande','Cloud','Sweet',[]],
- ['Ariana Grande','Sweet Like Candy','Sweet',[]],
- ['Victoria’s Secret','Bombshell','Fresh',[]],
- ['Victoria’s Secret','Scandalous','Warm',[]],
- ['Tom Ford','Lost Cherry','Warm',[]],
- ['Parfums de Marly','Delina','Floral',[]],
- ['Dior','Miss Dior Blooming Bouquet','Floral',[]],
- ['Burberry','Her','Sweet',[]],
- ['Burberry','Weekend','Fresh',[]],
- ['Versace','Bright Crystal','Floral',[]],
- ['Bvlgari','Omnia Amethyste','Floral',[]],
- ['Clinique','Happy','Fresh',[]],
- ['Britney Spears','Fantasy','Sweet',[]],
- ['Katy Perry','Meow','Sweet',[]],
- ['Paris Hilton','Paris Hilton','Fresh',[]],
- ['Jo Malone','Nectarine Blossom & Honey','Floral',[]],
- ['Lanvin','Éclat d’Arpège','Floral',[]],
- ['Davidoff','Cool Water','Fresh',[]],
- ['Incanto','Charms','Sweet',[]],
- ['Incanto','Shine','Fresh',[]],
-];
+// scents (from the Herfume / Hiscent / Uniscent facts labels)
+const S=[["her", "Bath & Body Works", "Pink Chiffon", ["Fruity", "Musky", "Sweet", "Powdery", "White Floral"]], ["her", "Bath & Body Works", "Gingham", ["Floral", "Citrus", "Sweet", "Powdery", "Violet"]], ["her", "Bath & Body Works", "Cucumber Melon", ["Ozonic", "Aquatic", "Fresh", "Fruity", "Green"]], ["her", "Bath & Body Works", "Mediterranean Mirage", ["Amber", "Musky", "Citrus", "Powdery", "Fresh Spicy"]], ["her", "Chanel", "Chance", ["Citrus", "Woody", "Musky", "Powdery", "White Floral"]], ["her", "Nina Ricci", "Nina", ["Fruity", "Citrus", "Sweet", "Fresh", "Woody"]], ["her", "Nina Ricci", "Ricci Ricci", ["Fruity", "Citrus", "Sweet", "Fresh", "Woody"]], ["her", "Lacoste", "Love of Pink", ["Fruity", "Citrus", "Sweet", "Fresh", "Floral"]], ["her", "Lancôme", "La Vie Est Belle", ["Fruity", "Patchouli", "Sweet", "Vanilla", "White Floral"]], ["her", "Gucci", "Rush", ["Fruity", "Patchouli", "Aromatic", "Vanilla", "White Floral"]], ["her", "Gucci", "Envy Me", ["Fruity", "Fresh", "Floral", "Rose", "Sweet"]], ["her", "Burberry", "London", ["Citrus", "Woody", "Musky", "Soft Spicy", "Floral"]], ["her", "Paris Hilton", "Paris Hilton", ["Fruity", "Fresh", "Floral", "Powdery", "White Floral"]], ["her", "Jo Malone", "Wild Bluebell", ["Rose", "Fresh", "Musky", "Powdery", "White Floral"]], ["her", "Carolina Herrera", "Good Girl", ["Warm Spicy", "Cacao", "Sweet", "Vanilla", "White Floral"]], ["her", "Estée Lauder", "Pleasures", ["Floral", "Fresh", "Green", "Rose", "Soft Spicy"]], ["her", "Dior", "Miss Dior Blooming Bouquet", ["Fruity", "Fresh", "Sweet", "Rose", "Floral"]], ["her", "Bvlgari", "Omnia Amethyste", ["Iris", "Vanilla", "Almond", "Powdery", "Floral"]], ["her", "Tom Ford", "Lost Cherry", ["Fruity", "Sweet", "Cherry", "Almond", "Nutty"]], ["her", "Burberry", "Weekend", ["Fruity", "Sweet", "Woody", "Powdery", "Floral"]], ["her", "Burberry", "Her", ["Sweet", "Fruity", "Woody", "Musky", "Powdery"]], ["her", "Davidoff", "Cool Water", ["Fruity", "Ozonic", "Sweet", "Aquatic", "Floral"]], ["her", "Bvlgari", "Petits et Mamans", ["Powdery", "Herbal", "Vanilla", "Sweet", "Floral"]], ["her", "Katy Perry", "Meow", ["Fruity", "Vanilla", "Sweet", "Powdery", "White Floral"]], ["her", "Victoria's Secret", "Scandalous", ["Fruity", "Rose", "Sweet", "Fresh", "Floral"]], ["her", "Victoria's Secret", "Bombshell", ["Fruity", "Rose", "Sweet", "Fresh", "Floral"]], ["her", "Britney Spears", "Circus Fantasy", ["Fruity", "Vanilla", "Sweet", "Powdery", "Floral"]], ["her", "Parfums de Marly", "Valaya", ["White Floral", "Musky", "Citrus", "Aldehydic", "Fresh"]], ["her", "Escada", "Bali Paradise", ["Tropical", "Floral", "Fruity", "Woody", "Herbal"]], ["her", "Escada", "Magnetism", ["Fruity", "Aromatic", "Fresh", "Green", "Sweet"]], ["her", "YSL", "Libre", ["White Floral", "Vanilla", "Citrus", "Lavender", "Sweet"]], ["her", "YSL", "Black Opium", ["Coffee", "Vanilla", "White Floral", "Warm Spicy", "Sweet"]], ["her", "Lanvin", "Éclat d'Arpège", ["Floral", "Fresh", "Green", "Fruity", "Musky"]], ["her", "Jean Paul Gaultier", "Scandal", ["Honey", "Citrus", "Animalic", "Caramel", "Beeswax"]], ["her", "Jean Paul Gaultier", "Ultra Male", ["Vanilla", "Fruity", "Aromatic", "Cinnamon", "Warm Spicy"]], ["her", "Issey Miyake", "L'Eau d'Issey", ["Fresh", "White Floral", "Ozonic", "Aquatic", "Floral"]], ["her", "Elizabeth Arden", "Green Tea", ["Fresh", "Citrus", "Aromatic", "Green", "Fresh Spicy"]], ["her", "Prada", "Paradoxe", ["Fresh", "Citrus", "Amber", "Vanilla", "White Floral"]], ["her", "Dolce & Gabbana", "Light Blue", ["Woody", "Citrus", "Fruity", "Fresh", "Aromatic"]], ["her", "Lacoste", "Pink", ["Sweet", "Citrus", "Vanilla", "Floral", "Powdery"]], ["her", "Ariana Grande", "Cloud", ["Sweet", "Vanilla", "Lactonic", "Musky", "Coconut"]], ["her", "Incanto", "Shine", ["Sweet", "Fruity", "Tropical", "Floral", "Powdery"]], ["uni", "Acca Kappa", "Muschio Bianco", ["Musky", "Woody", "Citrus", "Lavender", "Aromatic"]], ["uni", "Le Labo", "Santal 33", ["Powdery", "Woody", "Leather", "Warm Spicy", "Violet"]], ["uni", "Calvin Klein", "CK Be", ["Powdery", "Woody", "Aromatic", "Fresh Spicy", "Green"]], ["uni", "Diptyque", "L'Eau Papier", ["Powdery", "Woody", "Musky", "Yellow Floral", "Sweet"]], ["uni", "Ex Nihilo", "Blue Talisman", ["Citrus", "Woody", "Fruity", "Musky", "Sweet"]], ["uni", "Maison Francis Kurkdjian", "Baccarat Rouge 540", ["Mossy", "Woody", "Earthy", "Aromatic", "Animalic"]], ["uni", "Creed", "Aventus Impérial", ["Marine", "Citrus", "Salty", "Aromatic", "Fruity"]], ["his", "Dedcool", "Dedcool", ["Vanilla", "Sweet", "Powdery", "Woody", "Warm Spicy"]], ["his", "Hugo Boss", "Energise", ["Fresh Spicy", "Soft Spicy", "Aromatic", "Woody", "Fruity"]], ["his", "Dior", "Sauvage", ["Fresh Spicy", "Amber", "Aromatic", "Woody", "Musky"]], ["his", "Giorgio Armani", "Stronger With You Intensely", ["Vanilla", "Warm Spicy", "Aromatic", "Sweet", "Cinnamon"]], ["his", "Chanel", "Bleu de Chanel", ["Citrus", "Amber", "Fresh Spicy", "Woody", "Aromatic"]], ["his", "Carolina Herrera", "212 Men", ["Citrus", "Green", "Fresh Spicy", "Woody", "Powdery"]], ["his", "Lanvin", "Éclat d'Arpège Pour Homme", ["Woody", "Citrus", "Aromatic", "Ozonic", "Aquatic"]], ["his", "YSL", "Y", ["Woody", "Aromatic", "Fruity", "Warm Spicy", "Fresh Spicy"]], ["his", "Hugo Boss", "Boss Bottled Classic", ["Warm Spicy", "Cinnamon", "Vanilla", "Woody", "Fruity"]], ["his", "Ferrari", "Black", ["Warm Spicy", "Citrus", "Vanilla", "Sweet", "Fruity"]], ["his", "Axe", "Dark Temptation", ["Chocolate", "Amber", "Vanilla", "Sweet", "Warm Spicy"]], ["his", "Versace", "Eros", ["Green", "Vanilla", "Fresh Spicy", "Amber", "Aromatic"]], ["his", "Versace", "Eros Flame", ["Citrus", "Vanilla", "Fresh Spicy", "Woody", "Aromatic"]], ["his", "James Bond", "007", ["Warm Spicy", "Fruity", "Fresh Spicy", "Woody", "Aromatic"]], ["his", "Prada", "Luna Rossa", ["Aromatic", "Lavender", "Fresh Spicy", "Musky", "Amber"]], ["his", "Paco Rabanne", "1 Million", ["Cinnamon", "Citrus", "Warm Spicy", "Woody", "Amber"]], ["his", "Paco Rabanne", "Invictus", ["Marine", "Citrus", "Fresh Spicy", "Woody", "Aromatic"]], ["his", "Bvlgari", "Aqva", ["Woody", "Citrus", "Aquatic", "Marine", "Fresh Spicy"]], ["his", "Bvlgari", "Aqva Extreme", ["Woody", "Citrus", "Aromatic", "Green", "Fresh Spicy"]], ["his", "Lacoste", "Black", ["Woody", "Ozonic", "Aquatic", "Chocolate", "Warm Spicy"]], ["his", "Lacoste", "Red", ["Woody", "Fruity", "Aromatic", "Green", "Fresh"]], ["his", "Lacoste", "White", ["Woody", "Citrus", "Aromatic", "Green", "Fresh Spicy"]], ["his", "Tommy Hilfiger", "Tommy", ["Citrus", "Fruity", "Aromatic", "Fresh Spicy", "Green"]], ["his", "Tom Ford", "Tobacco Vanille", ["Vanilla", "Sweet", "Tobacco", "Warm Spicy", "Fruity"]], ["his", "Zara", "Tobacco Collection Rich Warm Addictive", ["Vanilla", "Sweet", "Tobacco", "Warm Spicy", "Fruity"]], ["his", "Issey Miyake", "L'Eau d'Issey Pour Homme", ["Woody", "Citrus", "Aromatic", "Green", "Floral"]], ["his", "Maison Francis Kurkdjian", "Grand Soir", ["Amber", "Vanilla", "Aromatic", "Sweet", "Powdery"]], ["his", "Clinique", "Happy for Men", ["Woody", "Marine", "Aromatic", "Green", "Citrus"]], ["her", "Clinique", "Happy", ["Floral", "White Floral", "Sweet", "Fresh Spicy", "Citrus"]]];
 (function(){
-  const fams=['All','Sweet','Floral','Fresh','Warm'],f=document.getElementById('filters'),l=document.getElementById('list');
-  let cur='All';
+  const L={her:'HERFUME',his:'HISCENT',uni:'UNISCENT'},list=document.getElementById('list'),q=document.getElementById('q');
+  let cur='her';
+  for(const k in L)document.getElementById('n-'+k).textContent=S.filter(s=>s[0]===k).length;
+  const esc=t=>t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   function draw(){
-    f.innerHTML=fams.map(x=>`<button class="${x===cur?'on':''}">${x}</button>`).join('');
-    f.querySelectorAll('button').forEach(b=>b.onclick=()=>{cur=b.textContent;draw()});
-    l.innerHTML=S.filter(s=>cur==='All'||s[2]===cur).map(s=>`<article class="scent"><small>Inspired by ${s[0]}</small><h3>${s[1]}</h3><div class="tags">${s[3].length?s[3].map(t=>`<span>${t}</span>`).join(''):`<span>${s[2]}</span>`}</div></article>`).join('');
+    document.querySelectorAll('.line').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===cur));
+    const term=q.value.trim().toLowerCase();
+    const rows=S.filter(s=>term?(s[1]+' '+s[2]+' '+s[3].join(' ')).toLowerCase().includes(term):s[0]===cur);
+    list.classList.toggle('searching',!!term);
+    list.innerHTML=rows.length?rows.map(s=>`<article class="scent"><span class="badge">${L[s[0]]}</span><small>Inspired by ${esc(s[1])}</small><h3>${esc(s[2])}</h3><div class="tags">${s[3].map(t=>`<span>${esc(t)}</span>`).join('')}</div></article>`).join(''):'<p class="empty">No match yet. Message us and we\'ll check if we can make it for you.</p>';
   }
+  document.querySelectorAll('.line').forEach(b=>b.onclick=()=>{cur=b.dataset.l;q.value='';draw()});
+  q.oninput=draw;
   draw();
 })();
 </script>
