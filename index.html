@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Averti Signature Scents</title>
+<meta name="description" content="Averti — Signature Scent Society. Perfume Pouches ₱799 (Buy 3 Take 1) and Twistable Perfumes ₱199 in Pink, Green, Blue and Purple.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f2ec; --surface:#fffdf9; --ink:#141210; --muted:#6c655d; --line:#ddd5ca;
+  --inv-bg:#141210; --inv-ink:#f6f2ec; --gold:#a8792a; --gold-soft:#e9d9b8;
+  --pink:#ec7f9a; --green:#5e9e7c; --blue:#4f9bd6; --purple:#9b7bd1;
+  --logo-filter:none;
+  --serif:"Bodoni Moda",Didot,"Times New Roman",serif; --sans:Inter,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12100e; --surface:#1c1916; --ink:#f1ebe2; --muted:#a59c90; --line:#34302a;
+  --inv-bg:#f1ebe2; --inv-ink:#12100e; --gold:#d6ad62; --gold-soft:#3b3122; --logo-filter:invert(1);
+}}
+:root[data-theme="dark"]{
+  --bg:#12100e; --surface:#1c1916; --ink:#f1ebe2; --muted:#a59c90; --line:#34302a;
+  --inv-bg:#f1ebe2; --inv-ink:#12100e; --gold:#d6ad62; --gold-soft:#3b3122; --logo-filter:invert(1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+@media(min-width:720px){.wrap{padding:0 32px}}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(36px,6vw,64px)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font:600 14px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 20px/1 var(--serif);letter-spacing:.08em}
+.brand img{width:34px;filter:var(--logo-filter)}
+.links{display:none;gap:28px;font-size:14px}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+@media(min-width:820px){.links{display:flex}}
+.nav-right{display:flex;gap:10px;align-items:center}
+.theme{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:16px}
+nav .btn{padding:10px 18px;font-size:12px}
+
+/* hero */
+.hero{display:grid;gap:40px;padding:56px 0 72px;align-items:center}
+@media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr;padding:88px 0 104px}}
+.hero h1{font-size:clamp(52px,10vw,124px);margin:18px 0 22px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:30em;margin-bottom:32px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-img{position:relative;justify-self:center;width:min(100%,440px)}
+.hero-img img{border-radius:220px 220px 16px 16px;aspect-ratio:2/3;object-fit:cover;width:100%}
+.stamp{position:absolute;left:10px;bottom:36px;width:118px;height:118px;border-radius:50%;background:var(--inv-bg);color:var(--inv-ink);display:grid;place-items:center;text-align:center;font:500 13px/1.15 var(--sans);transform:rotate(-10deg);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.stamp b{display:block;font:600 30px/1 var(--serif)}
+@media(min-width:900px){.stamp{left:-48px}}
+
+/* marquee */
+.marquee{background:var(--inv-bg);color:var(--inv-ink);overflow:hidden;padding:16px 0;white-space:nowrap}
+.marquee div{display:inline-block;animation:slide 32s linear infinite;font:italic 500 22px/1 var(--serif)}
+.marquee span{margin:0 28px}
+.marquee i{font-style:normal;color:var(--gold)}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee div{animation:none}}
+
+section{padding:88px 0}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:44px}
+.sec-head p{max-width:30em;color:var(--muted)}
+
+/* product */
+.product{display:grid;gap:40px;align-items:start}
+@media(min-width:900px){.product{grid-template-columns:1fr 1fr;gap:64px}}
+.gallery{display:grid;grid-template-columns:1.4fr 1fr;gap:12px}
+.gallery{grid-template-columns:1fr 1fr}
+.gallery img{width:100%;object-fit:cover;border-radius:14px;aspect-ratio:3/4}
+@media(min-width:900px){.gallery{position:sticky;top:96px}.gallery img{aspect-ratio:3/5}}
+.price{display:flex;align-items:baseline;gap:14px;margin:18px 0 8px}
+.price b{font:600 56px/1 var(--serif)}
+.price span{color:var(--muted)}
+.promo{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);color:var(--ink);padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px}
+.facts{margin:28px 0;border:2px solid var(--ink);padding:18px 20px;background:var(--surface);font-family:var(--sans)}
+.facts h4{font:800 30px/1 var(--sans);letter-spacing:-.04em;border-bottom:10px solid var(--ink);padding-bottom:6px;margin-bottom:6px}
+.facts .row{display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding:6px 0;font-size:14px}
+.facts .row:last-child{border:0;font-weight:600}
+.facts .sub{font-size:12px;color:var(--muted);border-bottom:4px solid var(--ink);padding-bottom:6px}
+
+/* calculator */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.calc-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px}
+.stepper button{width:44px;height:44px;border:0;background:transparent;color:var(--ink);font-size:20px;cursor:pointer}
+.stepper output{min-width:36px;text-align:center;font-weight:600;font-size:18px}
+.dots{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0}
+.dot{width:26px;height:34px;border-radius:8px 8px 4px 4px;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:10px;font-weight:600}
+.dot.free{background:var(--gold);border-color:var(--gold);color:#fff}
+.calc-sum{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--line);padding-top:14px}
+.calc-sum b{font:600 32px/1 var(--serif)}
+.calc-sum small{color:var(--gold);font-weight:600}
+
+/* twistable */
+.twist{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.twist-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.twist-grid{grid-template-columns:.9fr 1.1fr;gap:72px}}
+.twist-stage{position:relative;aspect-ratio:1;border-radius:24px;overflow:hidden;background:#fff}
+.twist-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
+.twist-stage img.on{opacity:1}
+.swatches{display:flex;gap:12px;margin:24px 0 8px;flex-wrap:wrap}
+.sw{display:flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);font:500 14px var(--sans);cursor:pointer}
+.sw i{width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,var(--c),#fff 110%)}
+.sw[aria-pressed="true"]{border-color:var(--ink)}
+.feat{list-style:none;display:grid;gap:10px;margin:22px 0 30px}
+.feat li{padding-left:26px;position:relative}
+.feat li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+
+/* scents */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 13px var(--sans);cursor:pointer}
+.filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.scents{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,46%),1fr));gap:12px}
+.scent{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+.scent small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.scent h3{font-size:clamp(19px,2.4vw,24px);margin:6px 0 10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.note{margin-top:18px;font-size:13px;color:var(--muted)}
+
+/* society */
+.society{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.society{grid-template-columns:1fr 1fr 1.2fr}}
+.society img{width:100%;height:100%;object-fit:cover;border-radius:14px;aspect-ratio:3/4}
+.quote{grid-column:1/-1;background:var(--inv-bg);color:var(--inv-ink);border-radius:14px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+@media(min-width:900px){.quote{grid-column:auto}}
+.quote p{font:italic 500 clamp(26px,3vw,38px)/1.15 var(--serif)}
+.quote span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+
+/* order */
+.order{background:var(--inv-bg);color:var(--inv-ink);text-align:center;padding:104px 0}
+.order img{width:84px;margin:0 auto 28px;filter:invert(1)}
+:root[data-theme="dark"] .order img{filter:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .order img{filter:none}}
+.order h2{max-width:14em;margin:0 auto 20px}
+.order p{opacity:.75;max-width:34em;margin:0 auto 36px}
+.order .btn{background:var(--inv-ink);color:var(--inv-bg);border-color:var(--inv-ink)}
+.order .btn.ghost{background:transparent;color:var(--inv-ink)}
+.steps{display:grid;gap:16px;margin:56px auto 0;max-width:900px;text-align:left}
+@media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps div{border-top:1px solid color-mix(in srgb,var(--inv-ink) 30%,transparent);padding-top:16px}
+.steps b{font:600 28px/1 var(--serif);color:var(--gold);display:block;margin-bottom:8px}
+footer{padding:32px 0;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="">AVERT¡</a>
+    <div class="links"><a href="#pouch">Perfume Pouch</a><a href="#twistable">Twistable</a><a href="#scents">Scents</a><a href="#society">Society</a></div>
+    <div class="nav-right">
+      <button class="theme" id="theme" aria-label="Toggle dark mode">◐</button>
+      <a class="btn" href="#order">Order</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <span class="eyebrow">Signature Scent Society</span>
+      <h1>Let your scent be your <em>voice.</em></h1>
+      <p class="lead">Eau de parfum crafted for those who speak without words. Long-lasting, pocket-ready, and not for the faint-hearted.</p>
+      <div class="cta">
+        <a class="btn" href="#pouch">Shop Perfume Pouch</a>
+        <a class="btn ghost" href="#twistable">Twistable ₱199</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/hero-bottles.webp" alt="Two Averti eau de parfum bottles">
+      <div class="stamp"><span>Buy 3<b>Take 1</b>free</span></div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div>
+    <span>Spray at your own wrist!</span><i>✦</i><span>Buy 3 Take 1 Perfume Pouch</span><i>✦</i><span>Twistable in 4 colors</span><i>✦</i><span>25% concentration · Eau de Parfum</span><i>✦</i>
+    <span>Spray at your own wrist!</span><i>✦</i><span>Buy 3 Take 1 Perfume Pouch</span><i>✦</i><span>Twistable in 4 colors</span><i>✦</i><span>25% concentration · Eau de Parfum</span><i>✦</i>
+  </div></div>
+
+  <section id="pouch">
+    <div class="wrap product">
+      <div class="gallery">
+        <img src="img/pouch-santal.webp" alt="Averti 50ml perfume in a clear keychain pouch">
+        <img src="img/pouch-collection.webp" alt="A collection of Averti perfume pouches">
+      </div>
+      <div>
+        <span class="eyebrow">Bestseller</span>
+        <h2>Perfume Pouch</h2>
+        <div class="price"><b>₱799</b><span>each · 50ml</span></div>
+        <span class="promo">✦ Buy 3, Take 1 free</span>
+        <p style="margin-top:20px;color:var(--muted)">A 50ml eau de parfum zipped in a clear, keychain-ready pouch. Clip it to your bag and you'll always have a spritz on hand.</p>
+
+        <div class="facts" aria-label="Herfume Facts">
+          <h4>HERFUME/FACTS</h4>
+          <div class="sub">Bottle size 50ml · Concentration 25% (Eau de Parfum)</div>
+          <div class="row"><span>Long-lasting wear</span><span>✓</span></div>
+          <div class="row"><span>Clear zip pouch + keyring</span><span>✓</span></div>
+          <div class="row"><span>Olfactory pyramid on every label</span><span>✓</span></div>
+          <div class="row"><span>Made with love</span><span>100%</span></div>
+        </div>
+
+        <div class="calc">
+          <div class="calc-top">
+            <strong>Build your bundle</strong>
+            <div class="stepper">
+              <button id="minus" aria-label="Fewer">−</button>
+              <output id="qty">4</output>
+              <button id="plus" aria-label="More">+</button>
+            </div>
+          </div>
+          <div class="dots" id="dots"></div>
+          <div class="calc-sum">
+            <div><b id="total">₱2,397</b><br><small id="saved">You save ₱799</small></div>
+            <span style="color:var(--muted);font-size:14px" id="paid">Pay for 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="twistable" class="twist">
+    <div class="wrap twist-grid">
+      <div class="twist-stage" id="stage">
+        <img class="on" data-c="pink" src="img/tw-pink.webp" alt="Pink twistable perfume">
+        <img data-c="green" src="img/tw-green.webp" alt="Green twistable perfume">
+        <img data-c="blue" src="img/tw-blue.webp" alt="Blue twistable perfume">
+        <img data-c="purple" src="img/tw-purple.webp" alt="Purple twistable perfume">
+      </div>
+      <div>
+        <span class="eyebrow">New · Pocket size</span>
+        <h2>Twistable Perfume</h2>
+        <div class="price"><b>₱199</b><span>each</span></div>
+        <div class="swatches" role="group" aria-label="Choose a color">
+          <button class="sw" aria-pressed="true" data-c="pink" style="--c:var(--pink)"><i></i>Pink</button>
+          <button class="sw" aria-pressed="false" data-c="green" style="--c:var(--green)"><i></i>Green</button>
+          <button class="sw" aria-pressed="false" data-c="blue" style="--c:var(--blue)"><i></i>Blue</button>
+          <button class="sw" aria-pressed="false" data-c="purple" style="--c:var(--purple)"><i></i>Purple</button>
+        </div>
+        <ul class="feat">
+          <li>Twist-up spray, slim enough for any pocket or pouch</li>
+          <li>Ombré tube in four colors: Pink, Green, Blue, Purple</li>
+          <li>Your signature scent for touch-ups on the go</li>
+        </ul>
+        <a class="btn" href="#order" id="twbtn">Order Pink Twistable</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="scents">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">The Scent Library</span><h2>Find your signature.</h2></div>
+        <p>Every Averti scent is inspired by a fragrance you already love. Message us with your pick, or ask for one you don't see here.</p>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="scents" id="list"></div>
+      <p class="note">Scents are Averti's own inspired-by interpretations. Averti is not affiliated with the brands named.</p>
+    </div>
+  </section>
+
+  <section id="society" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow">Signature Scent Society</span><h2>Worn by the society.</h2></div>
+      </div>
+      <div class="society">
+        <img src="img/customer-1.webp" alt="Customer holding an Averti twistable perfume">
+        <img src="img/customer-2.webp" alt="Customer holding an Averti perfume pouch">
+        <div class="quote">
+          <p>"Can't stop ordering these scents when everyone keeps asking what perfume I'm wearing."</p>
+          <span>— A Signature Scent Society member</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <div class="wrap">
+      <img src="img/logo.png" alt="Averti logo">
+      <span class="eyebrow">Ready to smell like you?</span>
+      <h2 style="margin-top:16px">Order through our Facebook page.</h2>
+      <p>Send us a message with your scent picks and quantity. We'll confirm your order, payment, and delivery details.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="https://m.me/AvertiOfficial" target="_blank" rel="noopener">Message us</a>
+        <a class="btn ghost" href="https://www.facebook.com/AvertiOfficial/" target="_blank" rel="noopener">Visit @AvertiOfficial</a>
+      </div>
+      <div class="steps">
+        <div><b>01</b>Choose your scents: Perfume Pouch or Twistable.</div>
+        <div><b>02</b>Message us. Every 3 pouches gets a 4th free.</div>
+        <div><b>03</b>Spray at your own wrist. Enjoy!</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Averti · Signature Scent Society</span><span>@AvertiOfficial</span></div></footer>
+
+<script>
+// theme
+(function(){
+  const r=document.documentElement,b=document.getElementById('theme');
+  try{const t=localStorage.getItem('av-theme');if(t)r.dataset.theme=t}catch(e){}
+  b.onclick=()=>{const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+    r.dataset.theme=dark?'light':'dark';try{localStorage.setItem('av-theme',r.dataset.theme)}catch(e){}};
+})();
+
+// bundle calculator: buy 3 take 1
+(function(){
+  let q=4;const P=799,fmt=n=>'₱'+n.toLocaleString('en-PH');
+  const $=id=>document.getElementById(id);
+  function draw(){
+    const free=Math.floor(q/4),paid=q-free;
+    $('qty').textContent=q;
+    $('dots').innerHTML=Array.from({length:q},(_,i)=>(i+1)%4===0?'<span class="dot free">FREE</span>':'<span class="dot"></span>').join('');
+    $('total').textContent=fmt(paid*P);
+    $('saved').textContent=free?'You save '+fmt(free*P):(4-q%4)===1?'Add 1 more for a free pouch':'Buy '+(3-q%4)+' more, get 1 free';
+    $('paid').textContent=q+' pouch'+(q>1?'es':'')+' · pay for '+paid;
+  }
+  $('plus').onclick=()=>{if(q<24){q++;draw()}};
+  $('minus').onclick=()=>{if(q>1){q--;draw()}};
+  draw();
+})();
+
+// twistable colors
+document.querySelectorAll('.sw').forEach(b=>b.onclick=()=>{
+  const c=b.dataset.c;
+  document.querySelectorAll('.sw').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  document.querySelectorAll('#stage img').forEach(i=>i.classList.toggle('on',i.dataset.c===c));
+  document.getElementById('twbtn').textContent='Order '+c[0].toUpperCase()+c.slice(1)+' Twistable';
+});
+
+// scents
+const S=[
+ ['Bath & Body Works','Pink Chiffon','Sweet',['Fruity','Musky','Sweet','Powdery','White Floral']],
+ ['Bath & Body Works','Gingham','Floral',['Floral','Citrus','Sweet','Powdery','Violet']],
+ ['Bath & Body Works','Cucumber Melon','Fresh',['Ozonic','Aquatic','Fresh','Fruity','Green']],
+ ['Bath & Body Works','Mediterranean Mirage','Warm',['Amber','Musky','Citrus','Powdery','Fresh Spicy']],
+ ['Bath & Body Works','Warm Vanilla','Sweet',[]],
+ ['Le Labo','Santal 33','Warm',['Woody','Powdery','Leather','Warm Spicy','Violet']],
+ ['YSL','Black Opium','Warm',[]],
+ ['Prada','Paradoxe','Floral',['Floral','Citrus','White Floral','Powdery','Amber']],
+ ['Estée Lauder','Pleasures','Fresh',['Floral','Fresh','Green','Rose','Soft Spicy']],
+ ['Lacoste','Love of Pink','Fresh',['Fruity','Citrus','Sweet','Fresh','Floral']],
+ ['Lacoste','Joy of Pink','Fresh',[]],
+ ['Nina Ricci','Nina','Sweet',['Fruity','Citrus','Sweet','Fresh','Woody']],
+ ['Nina Ricci','Ricci Ricci','Sweet',['Fruity','Citrus','Sweet','Fresh','Woody']],
+ ['Ariana Grande','Cloud','Sweet',[]],
+ ['Ariana Grande','Sweet Like Candy','Sweet',[]],
+ ['Victoria’s Secret','Bombshell','Fresh',[]],
+ ['Victoria’s Secret','Scandalous','Warm',[]],
+ ['Tom Ford','Lost Cherry','Warm',[]],
+ ['Parfums de Marly','Delina','Floral',[]],
+ ['Dior','Miss Dior Blooming Bouquet','Floral',[]],
+ ['Burberry','Her','Sweet',[]],
+ ['Burberry','Weekend','Fresh',[]],
+ ['Versace','Bright Crystal','Floral',[]],
+ ['Bvlgari','Omnia Amethyste','Floral',[]],
+ ['Clinique','Happy','Fresh',[]],
+ ['Britney Spears','Fantasy','Sweet',[]],
+ ['Katy Perry','Meow','Sweet',[]],
+ ['Paris Hilton','Paris Hilton','Fresh',[]],
+ ['Jo Malone','Nectarine Blossom & Honey','Floral',[]],
+ ['Lanvin','Éclat d’Arpège','Floral',[]],
+ ['Davidoff','Cool Water','Fresh',[]],
+ ['Incanto','Charms','Sweet',[]],
+ ['Incanto','Shine','Fresh',[]],
+];
+(function(){
+  const fams=['All','Sweet','Floral','Fresh','Warm'],f=document.getElementById('filters'),l=document.getElementById('list');
+  let cur='All';
+  function draw(){
+    f.innerHTML=fams.map(x=>`<button class="${x===cur?'on':''}">${x}</button>`).join('');
+    f.querySelectorAll('button').forEach(b=>b.onclick=()=>{cur=b.textContent;draw()});
+    l.innerHTML=S.filter(s=>cur==='All'||s[2]===cur).map(s=>`<article class="scent"><small>Inspired by ${s[0]}</small><h3>${s[1]}</h3><div class="tags">${s[3].length?s[3].map(t=>`<span>${t}</span>`).join(''):`<span>${s[2]}</span>`}</div></article>`).join('');
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
